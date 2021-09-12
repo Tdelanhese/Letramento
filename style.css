@@ -27,7 +27,6 @@ body {
 
 section {
   height: 100vh;
-  width: 100vw;
   position: relative;
 }
 
@@ -194,7 +193,7 @@ section#grid-infos .grid {
   display: grid;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-  max-width: 1100px;
+  max-width: 1300px;
 }
 
 section#grid-infos .grid .row-one {
@@ -361,6 +360,7 @@ section#explicacao-letramento .grid {
   display: grid;
   -ms-grid-columns: 5fr 1fr 5fr;
       grid-template-columns: 5fr 1fr 5fr;
+  justify-items: center;
 }
 
 section#explicacao-letramento .grid .seta {
@@ -406,15 +406,140 @@ section#explicacao-letramento .grid .cl-grid .item img {
   margin: 0.8rem 2rem;
 }
 
+section#conheca-amanda {
+  padding: 5rem 10rem;
+  height: auto;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section#conheca-amanda .itens {
+  max-width: 1500px;
+  width: 80vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+  grid-column-gap: 5rem;
+}
+
+section#conheca-amanda .itens .infos {
+  text-align: left;
+}
+
+section#conheca-amanda .itens .infos h2 {
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 4rem;
+  line-height: 5rem;
+  color: #ffffff;
+}
+
+section#conheca-amanda .itens .infos h2 span {
+  font-weight: bold;
+}
+
+section#conheca-amanda .itens .infos p {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 175%;
+  color: #fff;
+  margin-top: 5rem;
+}
+
+section#conheca-amanda .itens .infos p span {
+  color: #ffd075;
+}
+
+section#conheca-amanda .itens .infos .divisor {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(153, 87, 103, 0)), color-stop(50%, #995767), to(rgba(153, 87, 103, 0)));
+  background: linear-gradient(90deg, rgba(153, 87, 103, 0) 0%, #995767 50%, rgba(153, 87, 103, 0) 100%);
+  width: 100%;
+  height: 0.25rem;
+  margin: 3rem 0;
+}
+
+section#conheca-amanda .itens .insta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+section#conheca-amanda .itens .insta img {
+  height: 3rem;
+  margin: 0 1rem 0 3rem;
+}
+
+section#conheca-amanda .itens .insta p {
+  margin: 0;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 175%;
+  color: #fff;
+}
+
+section#conheca-amanda .itens .insta span {
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  color: #ffffff;
+}
+
+section#conheca-amanda .itens .insta-2 {
+  display: none;
+}
+
 @media (max-width: 1410px) {
   html {
     font-size: 52.5%;
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1110px) {
   section#infos-divisor .img-moca {
     width: 60%;
+  }
+  section#conheca-amanda .itens {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section#conheca-amanda .itens .infos .insta,
+  section#conheca-amanda .itens .infos .divisor {
+    display: none;
+  }
+  section#conheca-amanda .itens .insta-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  section#conheca-amanda .itens .img-amanda {
+    height: 384px;
+    width: 500px;
+    margin-top: 5rem;
   }
 }
 
@@ -482,9 +607,14 @@ section#explicacao-letramento .grid .cl-grid .item img {
   }
   section#explicacao-letramento {
     padding: 12.5rem 6rem;
+    padding-bottom: 0;
   }
   section#explicacao-letramento .grid .cl-grid .item img {
     margin-left: 0;
+  }
+  section#conheca-amanda .itens .img-amanda {
+    height: 344px;
+    width: 450px;
   }
 }
 
@@ -506,12 +636,23 @@ section#explicacao-letramento .grid .cl-grid .item img {
   }
   section#explicacao-letramento {
     padding: 12.5rem 3rem;
+    padding-bottom: 0;
+  }
+  section#conheca-amanda {
+    padding: 3rem 0rem;
+  }
+  section#conheca-amanda .itens .img-amanda {
+    height: 100%;
+    width: 100%;
   }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 392px) {
   html {
     font-size: 45%;
+  }
+  section#conheca-amanda .itens .insta p {
+    font-size: 1.4rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
