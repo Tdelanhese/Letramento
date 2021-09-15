@@ -624,6 +624,69 @@ section#feedbacks .grid .feed .author .infos .emp {
   margin: 0;
 }
 
+section#curso-pratico {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#curso-pratico h2 {
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 4rem;
+  line-height: 5rem;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 5rem;
+}
+
+section#curso-pratico .itens {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  max-width: 1100px;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+section#curso-pratico .itens .item {
+  margin: 4rem;
+  position: relative;
+}
+
+section#curso-pratico .itens .item p {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 140%;
+  text-align: center;
+  color: #ffffff;
+  position: absolute;
+  bottom: -4rem;
+}
+
+section#curso-pratico .itens .item p span {
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  text-align: center;
+  color: #ffd075;
+}
+
 @media (max-width: 1410px) {
   html {
     font-size: 52.5%;
@@ -638,7 +701,7 @@ section#feedbacks .grid .feed .author .infos .emp {
 
 @media (max-width: 1200px) {
   section#second-page .img-mulher {
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 
@@ -713,6 +776,10 @@ section#feedbacks .grid .feed .author .infos .emp {
   section#second-page .img-mulher {
     display: none;
   }
+  section#curso-pratico .itens {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 864px) {
@@ -769,6 +836,16 @@ section#feedbacks .grid .feed .author .infos .emp {
   }
   section#feedbacks .grid .feed:nth-child(2) {
     margin-bottom: 0;
+  }
+}
+
+@media (max-width: 678px) {
+  section#curso-pratico .itens .item {
+    margin: 4rem 0;
+  }
+  section#curso-pratico .itens {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 
