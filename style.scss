@@ -304,9 +304,12 @@ section {
     }
 
     &#explicacao-letramento {
-        padding: 12.5rem 10rem;
+        padding: 8rem 10rem;
         box-sizing: border-box;
         height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
 
         h1 {
             font-family: Merriweather;
@@ -326,6 +329,8 @@ section {
             display: grid;
             grid-template-columns: 5fr 1fr 5fr;
             justify-items: center;
+            max-width: 1500px;
+            margin-top: 4rem;
 
             .seta {
                 max-width: 60px;
@@ -491,7 +496,7 @@ section {
             grid-template-columns: repeat(3, minmax(230px, 1fr));
             grid-gap: 3rem;
             margin: 5rem 0;
-            max-width: 1250px;
+            max-width: 1500px;
 
             .column-1,
             .column-2,
@@ -609,6 +614,165 @@ section {
             }
         }
     }
+
+    &#aulas {
+        height: auto;
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            font-family: Merriweather;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 4rem;
+            line-height: 5rem;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .icons {
+            margin-top: 7rem;
+            width: 100%;
+            max-width: 800px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            justify-items: center;
+
+            .item {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .icon {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+
+                    .back {
+                        height: 80%;
+                        background: #833a49;
+                        width: 80%;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        z-index: -1;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
+                p {
+                    margin-top: 1.2rem;
+                    font-family: Raleway;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 1.8rem;
+                    line-height: 2.1rem;
+                    text-align: center;
+                    color: #ffffff;
+                }
+
+                .item:nth-child(1) .icon {
+                    height: 4.5rem;
+                    width: 5rem;
+                }
+
+                .item:nth-child(2) .icon {
+                    height: 4.5rem;
+                    width: 4rem;
+
+                    .back {
+                        left: 0;
+                    }
+                }
+
+                .item:nth-child(3) .icon {
+                    height: 4rem;
+                    width: 4.5rem;
+
+                    .back {
+                        left: 0 !important;
+                    }
+                }
+
+                .item:nth-child(4) .icon {
+                    height: 4rem;
+                    width: 3.5rem;
+
+                    .back {
+                        left: 0;
+                    }
+                }
+            }
+        }
+
+        .background {
+            height: 100%;
+            background: linear-gradient(180deg, #6b1d2b 0%, rgba(107, 29, 43, 0) 100%);
+            width: 100%;
+            margin-top: 35%;
+
+            .notebook {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: -25%;
+                margin-bottom: 7rem;
+                position: relative;
+
+                .not {
+                    height: 50%;
+                    width: 90%;
+                    max-height: 500px;
+                    max-width: 1000px;
+                }
+            }
+
+            .btns {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 5rem;
+
+                button {
+                    font-family: Raleway;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 1.6rem;
+                    line-height: 1.9rem;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: rgba(82, 6, 15, 0.75);
+                    border: 1px solid rgba(82, 6, 15, 0.75);
+                    box-sizing: border-box;
+                    border-radius: 3px 0px 0px 3px;
+                    background: #6b1d2b;
+                    padding: 1.5rem 4.5rem;
+                    outline: none;
+
+                    &:hover {
+                        box-shadow: 0px 0px 8px 2px rgba(247, 189, 97, 0.5);
+                    }
+
+                    &.selected {
+                        color: #FFFFFF;
+                        background: linear-gradient(180deg, #ffe4a5 0%, #ffd075 26.56%, #f0a44e 100%);
+                        box-shadow: 0px 0px 16px 2px rgba(247, 189, 97, 0.5);
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 1410px) {
@@ -620,6 +784,16 @@ section {
 @media (max-width: 1302px) {
     section#feedbacks h2 {
         padding: 0 15rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    section#aulas .background .notebook {
+        margin-top: -250px;
+    }
+
+    section#aulas .background {
+        margin-top: 350px;
     }
 }
 
@@ -698,6 +872,13 @@ section {
     html {
         font-size: 50%;
     }
+
+    section#aulas .icons {
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 3rem;
+        max-width: unset;
+        padding: 0 15rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -770,6 +951,10 @@ section {
     section#curso-pratico .itens {
         grid-template-columns: 1fr;
     }
+
+    section#aulas .icons {
+        padding: 0 5rem;
+    }
 }
 
 @media (max-width: 538px) {
@@ -806,6 +991,10 @@ section {
         height: 100%;
         width: 100%;
     }
+
+    section#aulas h2 {
+        padding: 0 3rem;
+    }
 }
 
 @media (max-width: 470px) {
@@ -821,5 +1010,9 @@ section {
 
     section#conheca-amanda .itens .insta p {
         font-size: 1.4rem;
+    }
+
+    section#aulas .icons {
+        padding: 0 1.5rem;
     }
 }

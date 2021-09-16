@@ -344,10 +344,20 @@ section#infos-divisor .text footer h1 {
 }
 
 section#explicacao-letramento {
-  padding: 12.5rem 10rem;
+  padding: 8rem 10rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 section#explicacao-letramento h1 {
@@ -370,6 +380,8 @@ section#explicacao-letramento .grid {
   -ms-grid-columns: 5fr 1fr 5fr;
       grid-template-columns: 5fr 1fr 5fr;
   justify-items: center;
+  max-width: 1500px;
+  margin-top: 4rem;
 }
 
 section#explicacao-letramento .grid .seta {
@@ -549,7 +561,7 @@ section#feedbacks .grid {
       grid-template-columns: repeat(3, minmax(230px, 1fr));
   grid-gap: 3rem;
   margin: 5rem 0;
-  max-width: 1250px;
+  max-width: 1500px;
 }
 
 section#feedbacks .grid .column-1,
@@ -687,6 +699,205 @@ section#curso-pratico .itens .item p span {
   color: #ffd075;
 }
 
+section#aulas {
+  height: auto;
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#aulas h2 {
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 4rem;
+  line-height: 5rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+section#aulas .icons {
+  margin-top: 7rem;
+  width: 100%;
+  max-width: 800px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+section#aulas .icons .item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#aulas .icons .item .icon {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#aulas .icons .item .icon img {
+  height: 100%;
+  width: 100%;
+}
+
+section#aulas .icons .item .icon .back {
+  height: 80%;
+  background: #833a49;
+  width: 80%;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+section#aulas .icons .item p {
+  margin-top: 1.2rem;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+section#aulas .icons .item .item:nth-child(1) .icon {
+  height: 4.5rem;
+  width: 5rem;
+}
+
+section#aulas .icons .item .item:nth-child(2) .icon {
+  height: 4.5rem;
+  width: 4rem;
+}
+
+section#aulas .icons .item .item:nth-child(2) .icon .back {
+  left: 0;
+}
+
+section#aulas .icons .item .item:nth-child(3) .icon {
+  height: 4rem;
+  width: 4.5rem;
+}
+
+section#aulas .icons .item .item:nth-child(3) .icon .back {
+  left: 0 !important;
+}
+
+section#aulas .icons .item .item:nth-child(4) .icon {
+  height: 4rem;
+  width: 3.5rem;
+}
+
+section#aulas .icons .item .item:nth-child(4) .icon .back {
+  left: 0;
+}
+
+section#aulas .background {
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#6b1d2b), to(rgba(107, 29, 43, 0)));
+  background: linear-gradient(180deg, #6b1d2b 0%, rgba(107, 29, 43, 0) 100%);
+  width: 100%;
+  margin-top: 35%;
+}
+
+section#aulas .background .notebook {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -25%;
+  margin-bottom: 7rem;
+  position: relative;
+}
+
+section#aulas .background .notebook .not {
+  height: 50%;
+  width: 90%;
+  max-height: 500px;
+  max-width: 1000px;
+}
+
+section#aulas .background .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5rem;
+}
+
+section#aulas .background .btns button {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(82, 6, 15, 0.75);
+  border: 1px solid rgba(82, 6, 15, 0.75);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 3px 0px 0px 3px;
+  background: #6b1d2b;
+  padding: 1.5rem 4.5rem;
+  outline: none;
+}
+
+section#aulas .background .btns button:hover {
+  -webkit-box-shadow: 0px 0px 8px 2px rgba(247, 189, 97, 0.5);
+          box-shadow: 0px 0px 8px 2px rgba(247, 189, 97, 0.5);
+}
+
+section#aulas .background .btns button.selected {
+  color: #FFFFFF;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffe4a5), color-stop(26.56%, #ffd075), to(#f0a44e));
+  background: linear-gradient(180deg, #ffe4a5 0%, #ffd075 26.56%, #f0a44e 100%);
+  -webkit-box-shadow: 0px 0px 16px 2px rgba(247, 189, 97, 0.5);
+          box-shadow: 0px 0px 16px 2px rgba(247, 189, 97, 0.5);
+}
+
 @media (max-width: 1410px) {
   html {
     font-size: 52.5%;
@@ -696,6 +907,15 @@ section#curso-pratico .itens .item p span {
 @media (max-width: 1302px) {
   section#feedbacks h2 {
     padding: 0 15rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  section#aulas .background .notebook {
+    margin-top: -250px;
+  }
+  section#aulas .background {
+    margin-top: 350px;
   }
 }
 
@@ -786,6 +1006,13 @@ section#curso-pratico .itens .item p span {
   html {
     font-size: 50%;
   }
+  section#aulas .icons {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-row-gap: 3rem;
+    max-width: unset;
+    padding: 0 15rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -847,6 +1074,9 @@ section#curso-pratico .itens .item p span {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  section#aulas .icons {
+    padding: 0 5rem;
+  }
 }
 
 @media (max-width: 538px) {
@@ -876,6 +1106,9 @@ section#curso-pratico .itens .item p span {
     height: 100%;
     width: 100%;
   }
+  section#aulas h2 {
+    padding: 0 3rem;
+  }
 }
 
 @media (max-width: 470px) {
@@ -890,6 +1123,9 @@ section#curso-pratico .itens .item p span {
   }
   section#conheca-amanda .itens .insta p {
     font-size: 1.4rem;
+  }
+  section#aulas .icons {
+    padding: 0 1.5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
