@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap");
 
 *,
 body {
@@ -17,7 +18,7 @@ html {
 }
 
 body {
-    overflow-x: hidden;
+    // overflow-x: hidden;
     background-color: #220808;
 }
 
@@ -30,6 +31,26 @@ section {
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        .back {
+            position: absolute;
+            top: 0;
+            z-index: -1;
+            opacity: 0.1;
+            width: 100vw;
+            object-fit: cover;
+        }
+
+        .blur {
+            position: absolute;
+            top: 0rem;
+            background: rgb(206, 70, 98);
+            opacity: 0.8;
+            filter: blur(30rem);
+            height: 50vh;
+            width: 50%;
+            z-index: -1;
+        }
 
         .logo {
             height: 6vh;
@@ -71,7 +92,7 @@ section {
         }
 
         h4 {
-            font-family: Merriweather;
+            font-family: "Merriweather", serif;
             font-size: 2.4rem;
             font-style: normal;
             font-weight: 400;
@@ -90,7 +111,7 @@ section {
             background: linear-gradient(180deg, #ffe4a5 0%, #ffd075 26.56%, #f0a44e 100%);
             box-shadow: 0px 0px 16px 2px rgba(247, 189, 97, 0.5);
             border-radius: 3px;
-            font-family: Raleway;
+            font-family: "Raleway", sans-serif;
             font-size: 1.5rem;
             font-style: normal;
             font-weight: 700;
@@ -129,7 +150,7 @@ section {
         }
 
         h3 {
-            font-family: Merriweather;
+            font-family: "Merriweather", serif;
             font-style: normal;
             font-weight: normal;
             font-size: 2.8rem;
@@ -153,7 +174,7 @@ section {
             z-index: 1;
 
             p {
-                font-family: Raleway;
+                font-family: "Raleway", sans-serif;
                 font-style: normal;
                 font-weight: 500;
                 font-size: 1.8rem;
@@ -196,7 +217,7 @@ section {
                 text-align: center;
 
                 h1 {
-                    font-family: Merriweather;
+                    font-family: "Merriweather", serif;
                     font-style: normal;
                     font-weight: bold;
                     color: #ffd075;
@@ -204,7 +225,7 @@ section {
                 }
 
                 p {
-                    font-family: Raleway;
+                    font-family: "Raleway", sans-serif;
                     font-style: normal;
                     font-weight: 500;
                     font-size: 1.4rem;
@@ -264,7 +285,7 @@ section {
             p {
                 max-width: 40%;
                 margin-top: 7rem;
-                font-family: Raleway;
+                font-family: "Raleway", sans-serif;
                 font-style: normal;
                 font-weight: 500;
                 font-size: 1.6rem;
@@ -280,7 +301,7 @@ section {
                 h4 {
                     margin: 1.5rem 0;
                     margin-bottom: -0.5rem;
-                    font-family: Raleway;
+                    font-family: "Raleway", sans-serif;
                     font-style: normal;
                     font-weight: 500;
                     font-size: 1.6rem;
@@ -291,7 +312,7 @@ section {
                 }
 
                 h1 {
-                    font-family: Merriweather;
+                    font-family: "Merriweather", serif;
                     font-style: normal;
                     font-weight: bold;
                     font-size: 2.8rem;
@@ -312,12 +333,14 @@ section {
         flex-direction: column;
 
         h1 {
-            font-family: Merriweather;
+            font-family: "Merriweather", serif;
             font-style: normal;
             font-weight: normal;
             font-size: 4rem;
             line-height: 5rem;
             color: #ffffff;
+            width: 100%;
+            max-width: 1500px;
 
             &.desc-title {
                 font-weight: bold;
@@ -339,7 +362,7 @@ section {
 
             .cl-grid {
                 p {
-                    font-family: Raleway;
+                    font-family: "Raleway", sans-serif;
                     font-style: normal;
                     font-weight: 500;
                     font-size: 16px;
@@ -381,7 +404,7 @@ section {
     &#conheca-amanda {
         padding: 5rem 10rem;
         height: auto;
-        width: 100vw;
+        width: 99vw;
         display: flex;
         justify-content: center;
 
@@ -396,7 +419,7 @@ section {
                 text-align: left;
 
                 h2 {
-                    font-family: Merriweather;
+                    font-family: "Merriweather", serif;
                     font-style: normal;
                     font-weight: normal;
                     font-size: 4rem;
@@ -409,7 +432,7 @@ section {
                 }
 
                 p {
-                    font-family: Raleway;
+                    font-family: "Raleway", sans-serif;
                     font-style: normal;
                     font-weight: bold;
                     font-size: 1.8rem;
@@ -447,7 +470,7 @@ section {
 
                 p {
                     margin: 0;
-                    font-family: Raleway;
+                    font-family: "Raleway", sans-serif;
                     font-style: normal;
                     font-weight: bold;
                     font-size: 1.8rem;
@@ -456,7 +479,7 @@ section {
                 }
 
                 span {
-                    font-family: Merriweather;
+                    font-family: "Merriweather", serif;
                     font-style: normal;
                     font-weight: normal;
                     font-size: 1.8rem;
@@ -481,7 +504,7 @@ section {
         align-items: center;
 
         h2 {
-            font-family: Merriweather;
+            font-family: "Merriweather", serif;
             font-style: normal;
             font-weight: normal;
             font-size: 4rem;
@@ -513,7 +536,7 @@ section {
                 margin-bottom: 3rem;
 
                 p {
-                    font-family: Raleway;
+                    font-family: "Raleway", sans-serif;
                     font-style: normal;
                     font-weight: 500;
                     font-size: 1.6rem;
@@ -539,7 +562,7 @@ section {
                         }
 
                         .name {
-                            font-family: Raleway;
+                            font-family: "Raleway", sans-serif;
                             font-style: normal;
                             font-weight: bold;
                             font-size: 1.6rem;
@@ -547,7 +570,7 @@ section {
                         }
 
                         .emp {
-                            font-family: Raleway;
+                            font-family: "Raleway", sans-serif;
                             font-style: normal;
                             font-weight: 500;
                             font-size: 1.4rem;
@@ -568,7 +591,7 @@ section {
         align-items: center;
 
         h2 {
-            font-family: Merriweather;
+            font-family: "Merriweather", serif;
             font-style: normal;
             font-weight: normal;
             font-size: 4rem;
@@ -591,7 +614,7 @@ section {
                 position: relative;
 
                 p {
-                    font-family: Raleway;
+                    font-family: "Raleway", sans-serif;
                     font-style: normal;
                     font-weight: 500;
                     font-size: 1.8rem;
@@ -602,7 +625,7 @@ section {
                     bottom: -4rem;
 
                     span {
-                        font-family: Merriweather;
+                        font-family: "Merriweather", serif;
                         font-style: normal;
                         font-weight: bold;
                         font-size: 2.4rem;
@@ -623,7 +646,7 @@ section {
         align-items: center;
 
         h2 {
-            font-family: Merriweather;
+            font-family: "Merriweather", serif;
             font-style: normal;
             font-weight: normal;
             font-size: 4rem;
@@ -672,7 +695,7 @@ section {
 
                 p {
                     margin-top: 1.2rem;
-                    font-family: Raleway;
+                    font-family: "Raleway", sans-serif;
                     font-style: normal;
                     font-weight: 500;
                     font-size: 1.8rem;
@@ -734,7 +757,7 @@ section {
                     height: 50%;
                     width: 90%;
                     max-height: 500px;
-                    max-width: 1000px;
+                    max-width: 900px;
                 }
             }
 
@@ -745,7 +768,7 @@ section {
                 margin-bottom: 5rem;
 
                 button {
-                    font-family: Raleway;
+                    font-family: "Raleway", sans-serif;
                     font-style: normal;
                     font-weight: bold;
                     font-size: 1.6rem;
@@ -765,9 +788,221 @@ section {
                     }
 
                     &.selected {
-                        color: #FFFFFF;
+                        color: #ffffff;
                         background: linear-gradient(180deg, #ffe4a5 0%, #ffd075 26.56%, #f0a44e 100%);
                         box-shadow: 0px 0px 16px 2px rgba(247, 189, 97, 0.5);
+                    }
+                }
+            }
+
+            .list-aulas {
+                width: 100%;
+                margin: 5rem 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .list {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-gap: 5rem;
+                    max-width: 1100px;
+
+                    .item {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+
+                        &.extra {
+                            grid-column: span 2;
+                            justify-content: flex-start;
+                            margin-left: 6rem;
+                        }
+
+                        img {
+                            height: auto;
+                        }
+
+                        p {
+                            font-family: "Merriweather", serif;
+                            font-weight: normal;
+                            font-size: 1.4rem;
+                            line-height: 2.3rem;
+                            color: #ffffff;
+                            max-width: 20rem;
+                            margin: 0;
+                            margin-left: 2rem;
+
+                            span {
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .sec-combo {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 10rem 0;
+
+                h2 {
+                    font-family: "Merriweather", serif;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 4rem;
+                    line-height: 5rem;
+                    text-align: center;
+                    color: #ffffff;
+                    max-width: 100rem;
+                }
+
+                .combos {
+                    display: grid;
+                    justify-items: center;
+                    align-content: center;
+                    grid-template-columns: 1fr 1fr;
+                    width: 100%;
+                    max-width: 100rem;
+
+                    .combo {
+                        margin: 5rem 0;
+
+                        p {
+                            font-family: "Raleway", sans-serif;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 1.8rem;
+                            line-height: 2.1rem;
+                            text-align: center;
+                            color: #ffffff;
+                            margin: 5rem 0;
+                        }
+
+                        .imagem-combo {
+                            height: 36rem;
+                            position: relative;
+
+                            &.c1 {
+                                background: url(imgs/combo1.png);
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                            }
+
+                            &.c2 {
+                                background: url(imgs/combo2.png);
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                            }
+
+                            .preco {
+                                position: absolute;
+                                top: -7%;
+                                right: -13%;
+                                background: linear-gradient(180deg, #ffd784 0%, #f0a44e 100%);
+                                height: 10rem;
+                                width: 10rem;
+                                border-radius: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                p {
+                                    font-family: "Raleway", sans-serif;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    font-size: 2rem;
+                                    line-height: 160%;
+                                    color: #000;
+                                    text-align: center;
+                                    text-decoration-line: line-through;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .price {
+                    margin: 2rem 0;
+                    font-family: "Raleway", sans-serif;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 2.4rem;
+                    line-height: 2.8rem;
+                    text-align: center;
+                    color: #ffffff;
+
+                    span {
+                        color: #ad475a;
+                        text-decoration-line: line-through;
+                        font-weight: 700;
+                    }
+                }
+
+                .options-pay {
+                    display: flex;
+                    font-family: "Raleway", sans-serif;
+                    font-style: normal;
+                    color: #ffffff;
+                    font-weight: bold;
+                    height: 100%;
+                    margin: 3rem 0;
+
+                    .parcelar {
+                        h5 {
+                            font-size: 2.4rem;
+                        }
+
+                        h3 {
+                            font-size: 6.2rem;
+                            line-height: 2.8rem;
+                            margin-top: 2rem;
+                        }
+                    }
+
+                    h2 {
+                        font-size: 14.4rem;
+                        line-height: 6rem;
+                        font-family: "Roboto Mono", monospace;
+                    }
+
+                    .cents {
+                        h4 {
+                            font-size: 4rem;
+                            line-height: 1rem;
+                            font-family: "Roboto Mono", monospace;
+                        }
+
+                        p {
+                            font-size: 1.3rem;
+                            line-height: 1rem;
+                            margin-left: 1rem;
+                            margin-top: 3rem;
+                            line-height: 1.4rem;
+                        }
+                    }
+                }
+
+                button {
+                    margin: 7rem 0;
+                    font-family: "Raleway", sans-serif;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 1.6rem;
+                    line-height: 1.9rem;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: #000;
+                    background: linear-gradient(180deg, #ffe4a5 0%, #ffd075 26.56%, #f0a44e 100%);
+                    box-shadow: 0px 0px 8px 2px rgba(247, 189, 97, 0.5);
+                    box-sizing: border-box;
+                    border-radius: 3px 0px 0px 3px;
+                    padding: 1.5rem 4.5rem;
+                    outline: none;
+
+                    &:hover {
+                        color: #fff;
                     }
                 }
             }
@@ -866,6 +1101,18 @@ section {
     section#curso-pratico .itens {
         grid-template-columns: 1fr 1fr;
     }
+
+    section#aulas .background .list-aulas .list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    section#aulas .background .list-aulas .list .item {
+        justify-content: center;
+    }
+
+    section#aulas .background .list-aulas .list .item.extra {
+        margin-left: 3rem;
+    }
 }
 
 @media (max-width: 864px) {
@@ -878,6 +1125,10 @@ section {
         grid-row-gap: 3rem;
         max-width: unset;
         padding: 0 15rem;
+    }
+
+    section#aulas .background .sec-combo .title {
+        padding: 0 4rem;
     }
 }
 
@@ -955,6 +1206,23 @@ section {
     section#aulas .icons {
         padding: 0 5rem;
     }
+
+    section#aulas .background .list-aulas .list {
+        grid-template-columns: 1fr;
+    }
+
+    section#aulas .background .list-aulas .list .item {
+        justify-content: center;
+    }
+
+    section#aulas .background .list-aulas .list .item.extra {
+        margin-left: 0rem;
+        grid-column: 1;
+    }
+
+    section#aulas .background .sec-combo .combos {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 538px) {
@@ -992,7 +1260,7 @@ section {
         width: 100%;
     }
 
-    section#aulas h2 {
+    section#aulas .title {
         padding: 0 3rem;
     }
 }
@@ -1000,6 +1268,14 @@ section {
 @media (max-width: 470px) {
     section#feedbacks {
         padding: 0 3rem;
+    }
+
+    section#aulas .background .list-aulas .list .item img {
+        height: 6rem;
+    }
+
+    section#aulas .background .list-aulas .list .item.extra img {
+        height: 4rem;
     }
 }
 
@@ -1014,5 +1290,11 @@ section {
 
     section#aulas .icons {
         padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 320px) {
+    html {
+        font-size: 37%;
     }
 }

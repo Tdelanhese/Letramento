@@ -39,33 +39,190 @@ var feeds = [
   },
 ];
 
-// $(`#feedbacks .grid`).empty();
 feeds.forEach(function (v) {
-    
-    if (v.emp) {
-        $(`#feedbacks .grid .column-${v.column}`).append(`
-            <div class="feed">
-                <p>${v.msg}</p>
-                <div class="author">
-                    <img src="./imgs/${v.img}" alt="">
-                    <div class="infos">
-                    <p class="name">${v.author}</p>
-                    <p class="emp">${v.emp}</p>
-                    </div>
-                </div>
-            </div>
-        `);
-    } else {
-    $(`#feedbacks .grid .column-${v.column}`).append(`
-        <div class="feed">
-            <p>${v.msg}</p>
-            <div class="author">
-            <img src="./imgs/${v.img}" alt="">
-            <div class="infos">
-                <p class="name">${v.author}</p>
-            </div>
-            </div>
-        </div>
-    `);
-    }
+  $(`#feedbacks .grid .column-${v.column}`).append(`
+      <div class="feed">
+          <p>${v.msg}</p>
+          <div class="author">
+              <img src="./imgs/${v.img}" alt="">
+              <div class="infos">
+              <p class="name">${v.author}</p>
+              ${ v.emp ? `<p class="emp">${v.emp}</p>` : '' }
+              </div>
+          </div>
+      </div>
+  `);
 });
+
+var aula = {
+  "letramentoUm": {
+    aulas: [
+      {
+        aula: "Aula 1:",
+        desc: "Introdução ao Curso Prático de Letramento - PBI",
+        img: "imgs/1.png"
+      },
+      {
+        aula: "Aula 2:",
+        desc: "Leitura em voz alta e memorização",
+        img: "imgs/2.png"
+      },
+      {
+        aula: "Aula 3:",
+        desc: "Interpretação do Texto de Raquel e Jacó",
+        img: "imgs/3.png"
+      },
+      {
+        aula: "Aula 4:",
+        desc: "Leitura em latim do texto de Raquel e Jacó",
+        img: "imgs/4.png"
+      },
+      {
+        aula: "Aula 5:",
+        desc: "Etimologia das palavras do texto de Raquel e Jacó",
+        img: "imgs/5.png"
+      },
+      {
+        aula: "Aula 6:",
+        desc: "Leitura de Os Companheiros de Ulisses",
+        img: "imgs/6.png"
+      },
+      {
+        aula: "Aula 7:",
+        desc: "Interpretação de Os Companheiros de Ulisses",
+        img: "imgs/7.png"
+      },
+      {
+        aula: "Aula 8:",
+        desc: "As rãs pedem um rei",
+        img: "imgs/8.png"
+      },
+      {
+        aula: "Aula 9:",
+        desc: "Interpretação e correção de exercícios",
+        img: "imgs/9.png"
+      },
+      {
+        aula: "Aula 10:",
+        desc: "Leitura e Interpretação de A Prece, José de Alencar",
+        img: "imgs/10.png"
+      },
+      {
+        aula: "Extra:",
+        desc: "Aula tira-dúvidas (gravada)",
+        img: "imgs/Extra.png",
+        extra: true
+      },
+    ],
+
+    notebook: "imgs/not1.png"
+  },
+
+  "letramentoDois": {
+    aulas: [
+      {
+        aula: "Aula 1:",
+        desc: "Introdução ao Curso Prático de Letramento - PBC",
+        img: "imgs/1.png"
+      },
+      {
+        aula: "Aula 2:",
+        desc: "Primeira aula de versificação",
+        img: "imgs/2.png"
+      },
+      {
+        aula: "Aula 3:",
+        desc: "Correção dos exercícios de versificação",
+        img: "imgs/3.png"
+      },
+      {
+        aula: "Aula 4:",
+        desc: "1ª aula de morfologia - percebendo as formas das palavras",
+        img: "imgs/4.png"
+      },
+      {
+        aula: "Aula 5:",
+        desc: "2ª aula de morfologia - classificando as palavras",
+        img: "imgs/5.png"
+      },
+      {
+        aula: "Aula 6:",
+        desc: "Aula de correção de exercícios - soneto de Camões",
+        img: "imgs/6.png"
+      },
+      {
+        aula: "Aula 7:",
+        desc: "Aula de interpretação de poesia - soneto de Camões",
+        img: "imgs/7.png"
+      },
+      {
+        aula: "Aula 8:",
+        desc: "Substantivos, adjetivos, pronomes e numerais",
+        img: "imgs/8.png"
+      },
+      {
+        aula: "Aula 9:",
+        desc: "Verbos e advérbios",
+        img: "imgs/9.png"
+      },
+      {
+        aula: "Aula 10:",
+        desc: "Preposições e conjunções",
+        img: "imgs/10.png"
+      },
+      {
+        aula: "Aula 11:",
+        desc: "Morfologia do latim: como funciona",
+        img: "imgs/11.png"
+      },
+      {
+        aula: "Aula 12:",
+        desc: "Tradução de Magnificat, usando a morfologia do latim",
+        img: "imgs/12.png"
+      },
+    ],
+
+    notebook: "imgs/not2.png"
+  },
+
+  createAulas(pAulas) {
+    var target = $(`#aulas .list-aulas .list`)
+
+    target.empty()
+    pAulas.forEach(function(v) {
+      target.append(`
+        <div class="item ${ v.extra ? 'extra' : ''}">
+          <img src="${v.img}" alt="">
+          <p><span>${v.aula}</span> ${v.desc}</p>
+        </div>
+      `)
+    })
+  }
+}
+
+aula.createAulas(aula["letramentoUm"].aulas)
+$("#aulas .aulas .notebook .not").attr("src", `${aula["letramentoUm"].notebook}`)
+
+$("#aulas .btns button").click(function() {
+  $("#aulas .btns button").removeClass("selected")
+  $(this).addClass("selected")
+
+  var selected = aula[$(this).data("index")]
+
+  $("#aulas .aulas .notebook .not").attr("src", `${selected.notebook}`)
+  aula.createAulas(selected.aulas)
+})
+
+if (window.innerWidth < 500) {
+  $("#first-page .back").attr("src", "imgs/backfirstmobile.png")
+} else {
+  $("#first-page .back").attr("src", "imgs/backfirst.png")
+}
+
+window.onresize = function(event) {
+  if (window.innerWidth < 500) {
+    $("#first-page .back").attr("src", "imgs/backfirstmobile.png")
+  } else {
+    $("#first-page .back").attr("src", "imgs/backfirst.png")
+  }
+};

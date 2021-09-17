@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap");
 *,
 body {
   margin: 0;
@@ -20,7 +21,6 @@ html {
 }
 
 body {
-  overflow-x: hidden;
   background-color: #220808;
 }
 
@@ -40,6 +40,28 @@ section#first-page {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+section#first-page .back {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  opacity: 0.1;
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section#first-page .blur {
+  position: absolute;
+  top: 0rem;
+  background: #ce4662;
+  opacity: 0.8;
+  -webkit-filter: blur(30rem);
+          filter: blur(30rem);
+  height: 50vh;
+  width: 50%;
+  z-index: -1;
 }
 
 section#first-page .logo {
@@ -84,7 +106,7 @@ section#first-page .video-player .livros {
 }
 
 section#first-page h4 {
-  font-family: Merriweather;
+  font-family: "Merriweather", serif;
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 400;
@@ -105,7 +127,7 @@ section#first-page button {
   -webkit-box-shadow: 0px 0px 16px 2px rgba(247, 189, 97, 0.5);
           box-shadow: 0px 0px 16px 2px rgba(247, 189, 97, 0.5);
   border-radius: 3px;
-  font-family: Raleway;
+  font-family: "Raleway", sans-serif;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
@@ -148,7 +170,7 @@ section#second-page .divisor {
 }
 
 section#second-page h3 {
-  font-family: Merriweather;
+  font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: normal;
   font-size: 2.8rem;
@@ -173,7 +195,7 @@ section#second-page .text {
 }
 
 section#second-page .text p {
-  font-family: Raleway;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 1.8rem;
@@ -237,7 +259,7 @@ section#grid-infos .grid .card-grid {
 }
 
 section#grid-infos .grid .card-grid h1 {
-  font-family: Merriweather;
+  font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: bold;
   color: #ffd075;
@@ -245,7 +267,7 @@ section#grid-infos .grid .card-grid h1 {
 }
 
 section#grid-infos .grid .card-grid p {
-  font-family: Raleway;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 1.4rem;
@@ -306,7 +328,7 @@ section#infos-divisor .text img {
 section#infos-divisor .text p {
   max-width: 40%;
   margin-top: 7rem;
-  font-family: Raleway;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 1.6rem;
@@ -323,7 +345,7 @@ section#infos-divisor .text footer {
 section#infos-divisor .text footer h4 {
   margin: 1.5rem 0;
   margin-bottom: -0.5rem;
-  font-family: Raleway;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 1.6rem;
@@ -334,7 +356,7 @@ section#infos-divisor .text footer h4 {
 }
 
 section#infos-divisor .text footer h1 {
-  font-family: Merriweather;
+  font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: bold;
   font-size: 2.8rem;
@@ -361,12 +383,14 @@ section#explicacao-letramento {
 }
 
 section#explicacao-letramento h1 {
-  font-family: Merriweather;
+  font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: normal;
   font-size: 4rem;
   line-height: 5rem;
   color: #ffffff;
+  width: 100%;
+  max-width: 1500px;
 }
 
 section#explicacao-letramento h1.desc-title {
@@ -390,7 +414,7 @@ section#explicacao-letramento .grid .seta {
 }
 
 section#explicacao-letramento .grid .cl-grid p {
-  font-family: Raleway;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -430,7 +454,7 @@ section#explicacao-letramento .grid .cl-grid .item img {
 section#conheca-amanda {
   padding: 5rem 10rem;
   height: auto;
-  width: 100vw;
+  width: 99vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -454,7 +478,7 @@ section#conheca-amanda .itens .infos {
 }
 
 section#conheca-amanda .itens .infos h2 {
-  font-family: Merriweather;
+  font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: normal;
   font-size: 4rem;
@@ -467,7 +491,7 @@ section#conheca-amanda .itens .infos h2 span {
 }
 
 section#conheca-amanda .itens .infos p {
-  font-family: Raleway;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 1.8rem;
@@ -505,7 +529,7 @@ section#conheca-amanda .itens .insta img {
 
 section#conheca-amanda .itens .insta p {
   margin: 0;
-  font-family: Raleway;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 1.8rem;
@@ -514,7 +538,7 @@ section#conheca-amanda .itens .insta p {
 }
 
 section#conheca-amanda .itens .insta span {
-  font-family: Merriweather;
+  font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: normal;
   font-size: 1.8rem;
@@ -544,7 +568,7 @@ section#feedbacks {
 }
 
 section#feedbacks h2 {
-  font-family: Merriweather;
+  font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: normal;
   font-size: 4rem;
@@ -587,7 +611,7 @@ section#feedbacks .grid .feed {
 }
 
 section#feedbacks .grid .feed p {
-  font-family: Raleway;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 1.6rem;
@@ -619,7 +643,7 @@ section#feedbacks .grid .feed .author .infos p {
 }
 
 section#feedbacks .grid .feed .author .infos .name {
-  font-family: Raleway;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 1.6rem;
@@ -627,7 +651,7 @@ section#feedbacks .grid .feed .author .infos .name {
 }
 
 section#feedbacks .grid .feed .author .infos .emp {
-  font-family: Raleway;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 1.4rem;
@@ -651,7 +675,7 @@ section#curso-pratico {
 }
 
 section#curso-pratico h2 {
-  font-family: Merriweather;
+  font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: normal;
   font-size: 4rem;
@@ -678,7 +702,7 @@ section#curso-pratico .itens .item {
 }
 
 section#curso-pratico .itens .item p {
-  font-family: Raleway;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 1.8rem;
@@ -690,7 +714,7 @@ section#curso-pratico .itens .item p {
 }
 
 section#curso-pratico .itens .item p span {
-  font-family: Merriweather;
+  font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: bold;
   font-size: 2.4rem;
@@ -715,7 +739,7 @@ section#aulas {
 }
 
 section#aulas h2 {
-  font-family: Merriweather;
+  font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: normal;
   font-size: 4rem;
@@ -782,7 +806,7 @@ section#aulas .icons .item .icon .back {
 
 section#aulas .icons .item p {
   margin-top: 1.2rem;
-  font-family: Raleway;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 1.8rem;
@@ -851,7 +875,7 @@ section#aulas .background .notebook .not {
   height: 50%;
   width: 90%;
   max-height: 500px;
-  max-width: 1000px;
+  max-width: 900px;
 }
 
 section#aulas .background .btns {
@@ -868,7 +892,7 @@ section#aulas .background .btns {
 }
 
 section#aulas .background .btns button {
-  font-family: Raleway;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 1.6rem;
@@ -891,11 +915,259 @@ section#aulas .background .btns button:hover {
 }
 
 section#aulas .background .btns button.selected {
-  color: #FFFFFF;
+  color: #ffffff;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffe4a5), color-stop(26.56%, #ffd075), to(#f0a44e));
   background: linear-gradient(180deg, #ffe4a5 0%, #ffd075 26.56%, #f0a44e 100%);
   -webkit-box-shadow: 0px 0px 16px 2px rgba(247, 189, 97, 0.5);
           box-shadow: 0px 0px 16px 2px rgba(247, 189, 97, 0.5);
+}
+
+section#aulas .background .list-aulas {
+  width: 100%;
+  margin: 5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#aulas .background .list-aulas .list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5rem;
+  max-width: 1100px;
+}
+
+section#aulas .background .list-aulas .list .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+section#aulas .background .list-aulas .list .item.extra {
+  grid-column: span 2;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: 6rem;
+}
+
+section#aulas .background .list-aulas .list .item img {
+  height: auto;
+}
+
+section#aulas .background .list-aulas .list .item p {
+  font-family: "Merriweather", serif;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 2.3rem;
+  color: #ffffff;
+  max-width: 20rem;
+  margin: 0;
+  margin-left: 2rem;
+}
+
+section#aulas .background .list-aulas .list .item p span {
+  font-weight: bold;
+}
+
+section#aulas .background .sec-combo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10rem 0;
+}
+
+section#aulas .background .sec-combo h2 {
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 4rem;
+  line-height: 5rem;
+  text-align: center;
+  color: #ffffff;
+  max-width: 100rem;
+}
+
+section#aulas .background .sec-combo .combos {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: 100rem;
+}
+
+section#aulas .background .sec-combo .combos .combo {
+  margin: 5rem 0;
+}
+
+section#aulas .background .sec-combo .combos .combo p {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  text-align: center;
+  color: #ffffff;
+  margin: 5rem 0;
+}
+
+section#aulas .background .sec-combo .combos .combo .imagem-combo {
+  height: 36rem;
+  position: relative;
+}
+
+section#aulas .background .sec-combo .combos .combo .imagem-combo.c1 {
+  background: url(imgs/combo1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+section#aulas .background .sec-combo .combos .combo .imagem-combo.c2 {
+  background: url(imgs/combo2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+section#aulas .background .sec-combo .combos .combo .imagem-combo .preco {
+  position: absolute;
+  top: -7%;
+  right: -13%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffd784), to(#f0a44e));
+  background: linear-gradient(180deg, #ffd784 0%, #f0a44e 100%);
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#aulas .background .sec-combo .combos .combo .imagem-combo .preco p {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 160%;
+  color: #000;
+  text-align: center;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+}
+
+section#aulas .background .sec-combo .price {
+  margin: 2rem 0;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+section#aulas .background .sec-combo .price span {
+  color: #ad475a;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  font-weight: 700;
+}
+
+section#aulas .background .sec-combo .options-pay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  color: #ffffff;
+  font-weight: bold;
+  height: 100%;
+  margin: 3rem 0;
+}
+
+section#aulas .background .sec-combo .options-pay .parcelar h5 {
+  font-size: 2.4rem;
+}
+
+section#aulas .background .sec-combo .options-pay .parcelar h3 {
+  font-size: 6.2rem;
+  line-height: 2.8rem;
+  margin-top: 2rem;
+}
+
+section#aulas .background .sec-combo .options-pay h2 {
+  font-size: 14.4rem;
+  line-height: 6rem;
+  font-family: "Roboto Mono", monospace;
+}
+
+section#aulas .background .sec-combo .options-pay .cents h4 {
+  font-size: 4rem;
+  line-height: 1rem;
+  font-family: "Roboto Mono", monospace;
+}
+
+section#aulas .background .sec-combo .options-pay .cents p {
+  font-size: 1.3rem;
+  line-height: 1rem;
+  margin-left: 1rem;
+  margin-top: 3rem;
+  line-height: 1.4rem;
+}
+
+section#aulas .background .sec-combo button {
+  margin: 7rem 0;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffe4a5), color-stop(26.56%, #ffd075), to(#f0a44e));
+  background: linear-gradient(180deg, #ffe4a5 0%, #ffd075 26.56%, #f0a44e 100%);
+  -webkit-box-shadow: 0px 0px 8px 2px rgba(247, 189, 97, 0.5);
+          box-shadow: 0px 0px 8px 2px rgba(247, 189, 97, 0.5);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 3px 0px 0px 3px;
+  padding: 1.5rem 4.5rem;
+  outline: none;
+}
+
+section#aulas .background .sec-combo button:hover {
+  color: #fff;
 }
 
 @media (max-width: 1410px) {
@@ -1000,6 +1272,18 @@ section#aulas .background .btns button.selected {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
+  section#aulas .background .list-aulas .list {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  section#aulas .background .list-aulas .list .item {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section#aulas .background .list-aulas .list .item.extra {
+    margin-left: 3rem;
+  }
 }
 
 @media (max-width: 864px) {
@@ -1012,6 +1296,9 @@ section#aulas .background .btns button.selected {
     grid-row-gap: 3rem;
     max-width: unset;
     padding: 0 15rem;
+  }
+  section#aulas .background .sec-combo .title {
+    padding: 0 4rem;
   }
 }
 
@@ -1077,6 +1364,24 @@ section#aulas .background .btns button.selected {
   section#aulas .icons {
     padding: 0 5rem;
   }
+  section#aulas .background .list-aulas .list {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  section#aulas .background .list-aulas .list .item {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section#aulas .background .list-aulas .list .item.extra {
+    margin-left: 0rem;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  section#aulas .background .sec-combo .combos {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 538px) {
@@ -1106,7 +1411,7 @@ section#aulas .background .btns button.selected {
     height: 100%;
     width: 100%;
   }
-  section#aulas h2 {
+  section#aulas .title {
     padding: 0 3rem;
   }
 }
@@ -1114,6 +1419,12 @@ section#aulas .background .btns button.selected {
 @media (max-width: 470px) {
   section#feedbacks {
     padding: 0 3rem;
+  }
+  section#aulas .background .list-aulas .list .item img {
+    height: 6rem;
+  }
+  section#aulas .background .list-aulas .list .item.extra img {
+    height: 4rem;
   }
 }
 
@@ -1126,6 +1437,12 @@ section#aulas .background .btns button.selected {
   }
   section#aulas .icons {
     padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  html {
+    font-size: 37%;
   }
 }
 /*# sourceMappingURL=style.css.map */
