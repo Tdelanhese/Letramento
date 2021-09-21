@@ -21,6 +21,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   background-color: #220808;
 }
 
@@ -1170,6 +1171,171 @@ section#aulas .background .sec-combo button:hover {
   color: #fff;
 }
 
+section#aulas .background .sec-oferta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10rem 0;
+}
+
+section#aulas .background .sec-oferta h4 {
+  font-family: "Raleway", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  text-align: center;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 0 2rem;
+}
+
+section#aulas .background .sec-oferta .timer {
+  margin: 5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff;
+  padding: 2rem 10rem;
+  border-radius: 1.5rem;
+}
+
+section#aulas .background .sec-oferta .timer .divisor {
+  background: #f7bd61;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin: 0 3rem;
+}
+
+section#aulas .background .sec-oferta .timer .time h3 {
+  font-family: "Roboto Mono", monospace;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 7.2rem;
+  line-height: 8.5rem;
+  text-align: center;
+  color: #030103;
+  margin: 0;
+}
+
+section#aulas .background .sec-oferta .timer .time p {
+  font-family: "Raleway", serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  text-align: center;
+  color: #030103;
+  margin: 0;
+}
+
+section#aulas .background .sec-duvidas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#aulas .background .sec-duvidas h2 {
+  font-family: "Raleway", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 5rem;
+  text-align: center;
+  color: #ffffff;
+  margin: 10rem 0;
+  margin-top: 0;
+}
+
+section#aulas .background .sec-duvidas .perguntas {
+  width: 100%;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section#aulas .background .sec-duvidas .perguntas .pergunta {
+  width: 100%;
+  border-radius: 0.8rem;
+  background: #3a181b;
+  padding: 1.5rem 2rem;
+  margin: 0.8rem 0;
+}
+
+section#aulas .background .sec-duvidas .perguntas .pergunta .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#aulas .background .sec-duvidas .perguntas .pergunta .title h5 {
+  font-family: "Raleway", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+section#aulas .background .sec-duvidas .perguntas .pergunta .title img {
+  height: 1rem;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+section#aulas .background .sec-duvidas .perguntas .pergunta .resp {
+  font-family: "Raleway", serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 150%;
+  color: #ffffff;
+  margin-top: 2rem;
+}
+
+section#aulas .background .sec-duvidas .perguntas .pergunta.hide .resp {
+  display: none;
+}
+
+section#aulas .background .sec-duvidas .perguntas .pergunta.hide .title img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 @media (max-width: 1410px) {
   html {
     font-size: 52.5%;
@@ -1414,6 +1580,9 @@ section#aulas .background .sec-combo button:hover {
   section#aulas .title {
     padding: 0 3rem;
   }
+  section#aulas .background .sec-oferta .timer {
+    padding: 2rem 5rem;
+  }
 }
 
 @media (max-width: 470px) {
@@ -1425,6 +1594,9 @@ section#aulas .background .sec-combo button:hover {
   }
   section#aulas .background .list-aulas .list .item.extra img {
     height: 4rem;
+  }
+  section#aulas .background .sec-oferta .timer .time h3 {
+    font-size: 6.2rem;
   }
 }
 

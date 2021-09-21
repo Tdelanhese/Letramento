@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    // overflow-x: hidden;
+    overflow-x: hidden;
     background-color: #220808;
 }
 
@@ -1006,6 +1006,143 @@ section {
                     }
                 }
             }
+
+            .sec-oferta {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 10rem 0;
+
+                h4 {
+                    font-family: "Raleway", serif;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 1.6rem;
+                    line-height: 1.9rem;
+                    text-align: center;
+                    letter-spacing: 0.5rem;
+                    text-transform: uppercase;
+                    color: #ffffff;
+                    padding: 0 2rem;
+                }
+
+                .timer {
+                    margin: 5rem 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #ffffff;
+                    padding: 2rem 10rem;
+                    border-radius: 1.5rem;
+
+                    .divisor {
+                        background: #f7bd61;
+                        height: 1rem;
+                        width: 1rem;
+                        border-radius: 50%;
+                        margin: 0 3rem;
+                    }
+
+                    .time {
+                        h3 {
+                            font-family: "Roboto Mono", monospace;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 7.2rem;
+                            line-height: 8.5rem;
+                            text-align: center;
+                            color: #030103;
+                            margin: 0;
+                        }
+
+                        p {
+                            font-family: "Raleway", serif;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 1.6rem;
+                            line-height: 1.9rem;
+                            text-align: center;
+                            color: #030103;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+
+            .sec-duvidas {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h2 {
+                    font-family: "Raleway", serif;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 4rem;
+                    line-height: 5rem;
+                    text-align: center;
+                    color: #ffffff;
+                    margin: 10rem 0;
+                    margin-top: 0;
+                }
+
+                .perguntas {
+                    width: 100%;
+                    max-width: 1200px;
+                    display: flex;
+                    flex-direction: column;
+
+                    .pergunta {
+                        width: 100%;
+                        border-radius: 0.8rem;
+                        background: #3a181b;
+                        padding: 1.5rem 2rem;
+                        margin: 0.8rem 0;
+
+                        .title {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            h5 {
+                                font-family: "Raleway", serif;
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 1.6rem;
+                                line-height: 1.9rem;
+                                text-align: center;
+                                color: #ffffff;
+                            }
+
+                            img {
+                                height: 1rem;
+                                transition: 0.5s all;
+                            }
+                        }
+                        .resp {
+                            font-family: "Raleway", serif;
+                            font-style: normal;
+                            font-weight: 300;
+                            font-size: 1.4rem;
+                            line-height: 150%;
+                            color: #ffffff;
+                            margin-top: 2rem;
+                        }
+
+                        &.hide {
+                            .resp {
+                                display: none;
+                            }
+
+                            .title {
+                                img {
+                                    transform: rotate(180deg);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -1263,6 +1400,10 @@ section {
     section#aulas .title {
         padding: 0 3rem;
     }
+
+    section#aulas .background .sec-oferta .timer {
+        padding: 2rem 5rem;
+    }
 }
 
 @media (max-width: 470px) {
@@ -1276,6 +1417,10 @@ section {
 
     section#aulas .background .list-aulas .list .item.extra img {
         height: 4rem;
+    }
+
+    section#aulas .background .sec-oferta .timer .time h3 {
+        font-size: 6.2rem;
     }
 }
 
