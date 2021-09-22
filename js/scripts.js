@@ -239,41 +239,41 @@ var perguntasFrequentes = {
     {
       pergunta:
         "Sou graduado, pós-graduado ou doutor em uma das melhores faculdades do país. Posso ser um analfabeto funcional?",
-      resp: "Oasd",
+      resp: "Infelizmente, sim. Atualmente, receber uma certificação dada por uma Instituição de Ensino Superior significa tão somente… que você tem um pedaço de papel. O analfabeto funcional tem a capacidade de imitar com muita destreza a linguagem erudita, disfarçando seus problemas intelectuais mais profundos. Tenho centenas de alunos que passaram pelas Universidades e que se descobriram analfabetos funcionais fazendo meus cursos.",
     },
     {
       pergunta:
         "Tenho filhos/alunos pequenos. Existe uma idade mínima para participar do Curso Prático de Letramento?",
-      resp: "Oasd",
+      resp: "Não. Este curso foi elaborado para que todos os alfabetizados pudessem tirar proveito dele, principalmente os menores que estão na formação inicial dos seus estudos literários. Tendo sido alfabetizadas, a minha recomendação é que as crianças participem dele o quanto antes. Tenho dezenas de alunos com pouca idade que aproveitam muito bem este curso.",
     },
     {
       pergunta: "Quais as formas de pagamento?",
-      resp: "Oasd",
+      resp: "Você pode adquirir o acesso ao curso através de cartão de crédito, boleto bancário, PIX, débito bancário e Paypal.",
     },
     {
       pergunta: "Em quanto tempo terei acesso ao curso?",
-      resp: "Oasd",
+      resp: "Assim que você finalizar a compra, o acesso chegará mediante um link que enviaremos para o seu e-mail utilizado para aquisição.",
     },
     {
       pergunta: "E se eu pagar por boleto, quando recebo?",
-      resp: "Oasd",
+      resp: "No caso de pagamento por boleto, você deve aguardar até 3 dias úteis para liberação do seu acesso, já que é esse o prazo que o banco pode levar para reconhecer o pagamento.",
     },
     {
       pergunta: "O acesso é vitalício?",
-      resp: "Oasd",
+      resp: "Sim, você poderá acessar as aulas e materiais complementares sempre que quiser. No entanto, o suporte dessas aulas possui um ano de duração.",
     },
     {
       pergunta: "E se eu não gostar?",
-      resp: "Oasd",
+      resp: "Caso você não goste do conteúdo do Curso Prático de Letramento, você poderá solicitar o seu reembolso em até 7 dias e devolveremos o seu investimento.",
     },
     {
       pergunta: "Tem período de teste?",
-      resp: "Oasd",
+      resp: "Não temos período de teste, mas oferecemos 7 dias de garantia incondicional para que você possa acessar o conteúdo do curso e avaliá-lo.",
     },
     {
       pergunta:
         "Tenho outras dúvidas que não encontrei aqui, quem pode me respondê-las?",
-      resp: "Oasd",
+      resp: "Caso a sua dúvida não tenha sido respondida nesta página, entre em contato com minha equipe de suporte através do e-mail profamandastella@gmail.com.",
     },
   ],
 
@@ -322,7 +322,7 @@ function getDiffDates(dateNow, dateFuture) {
     seconds = 0;
   }
 
-  return { d: days, h: hours, m: minutes };
+  return { d: days, h: hours, m: minutes, s: seconds };
 }
 
 function setDate() {
@@ -342,6 +342,7 @@ function setDate() {
     $(".sec-oferta .dias h3").text(dif.d);
     $(".sec-oferta .hora h3").text(dif.h);
     $(".sec-oferta .min h3").text(dif.m);
+    $(".sec-oferta .sec h3").text(dif.s);
 
     setInterval(function () {
       dif = getDiffDates(dateNow, dateFuture);
@@ -350,6 +351,7 @@ function setDate() {
       $(".sec-oferta .dias h3").text(dif.d);
       $(".sec-oferta .hora h3").text(dif.h);
       $(".sec-oferta .min h3").text(dif.m);
-    }, 60000);
+      $(".sec-oferta .sec h3").text(dif.s);
+    }, 1000);
   });
 }
