@@ -194,7 +194,7 @@ section {
         .grid {
             margin: 5rem;
             display: grid;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: 1fr;
             max-width: 1300px;
 
             .row-one {
@@ -277,6 +277,7 @@ section {
             img {
                 max-width: 100px;
                 max-height: 100px;
+                height: 12rem;
                 position: absolute;
                 top: -3rem;
                 z-index: 1;
@@ -1091,9 +1092,10 @@ section {
                     max-width: 1200px;
                     display: flex;
                     flex-direction: column;
+                    align-items: center;
 
                     .pergunta {
-                        width: 100%;
+                        width: 95%;
                         border-radius: 0.8rem;
                         background: #3a181b;
                         padding: 1.5rem 2rem;
@@ -1103,6 +1105,7 @@ section {
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
+                            padding: 0;
 
                             h5 {
                                 font-family: "Raleway", serif;
@@ -1110,7 +1113,8 @@ section {
                                 font-weight: 500;
                                 font-size: 1.6rem;
                                 line-height: 1.9rem;
-                                text-align: center;
+                                text-align: inherit;
+                                padding-right: 2em;
                                 color: #ffffff;
                             }
 
@@ -1140,6 +1144,45 @@ section {
                                 }
                             }
                         }
+                    }
+                }
+            }
+
+            .sec-garantia {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 8rem 0;
+
+                .title {
+                    max-width: 1100px;
+                    width: 80%;
+                    display: flex;
+                    padding: 0 !important;
+                    align-items: center;
+
+                    h2 {
+                        text-align: unset;
+                    }
+                }
+
+                .desc {
+                    margin-top: 5rem;
+                    max-width: 1100px;
+                    width: 80%;
+                    display: grid;
+                    grid-template-columns: 4fr 1fr;
+                    grid-gap: 3rem;
+                    justify-items: center;
+
+                    p {
+                        font-family: "Raleway", serif;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 1.6rem;
+                        line-height: 175%;
+                        text-align: inherit;
+                        color: #ffffff;
                     }
                 }
             }
@@ -1202,6 +1245,13 @@ section {
     }
 }
 
+@media (max-width: 1010px) {
+    section#grid-infos .grid .row-two .card-grid:nth-child(1),
+    section#grid-infos .grid .row-two .card-grid:nth-child(3) {
+        grid-column: 1 / 2;
+    }
+}
+
 @media (max-width: 982px) {
     section#infos-divisor .img-moca {
         position: relative;
@@ -1250,6 +1300,27 @@ section {
     section#aulas .background .list-aulas .list .item.extra {
         margin-left: 3rem;
     }
+
+    section#curso-pratico .itens .item:nth-child(3) {
+        grid-column: 1 / 3;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(147deg, #6b0009 0%, #d15660 100%);
+    border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #b35d74;
+}
+::-webkit-scrollbar-track {
+    background: #6b0009;
+    border-radius: 15px;
+    box-shadow: inset 0px 0px 0px 0px #f0f0f0;
 }
 
 @media (max-width: 864px) {
@@ -1329,6 +1400,10 @@ section {
     section#feedbacks .grid .feed:nth-child(2) {
         margin-bottom: 0;
     }
+
+    section#grid-infos .grid .row-one .card-grid:nth-child(3) {
+        grid-column: 1 / 3;
+    }
 }
 
 @media (max-width: 678px) {
@@ -1360,6 +1435,16 @@ section {
     section#aulas .background .sec-combo .combos {
         grid-template-columns: 1fr;
     }
+
+    section#curso-pratico .itens .item:nth-child(3) {
+        grid-column: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    section#aulas .background .sec-garantia .desc {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 538px) {
@@ -1384,7 +1469,7 @@ section {
     }
 
     section#explicacao-letramento {
-        padding: 12.5rem 3rem;
+        padding: 12.5rem 4rem;
         padding-bottom: 0;
     }
 
@@ -1403,6 +1488,10 @@ section {
 
     section#aulas .background .sec-oferta .timer {
         padding: 2rem 5rem;
+    }
+
+    section#grid-infos .grid .row-one .card-grid:nth-child(3) {
+        grid-column: 1;
     }
 }
 

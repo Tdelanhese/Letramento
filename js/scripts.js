@@ -316,6 +316,12 @@ function getDiffDates(dateNow, dateFuture) {
   minutes = minutes - days * 24 * 60 - hours * 60;
   seconds = seconds - days * 24 * 60 * 60 - hours * 60 * 60 - minutes * 60;
 
+  if(hours < 0) {
+    hours = 0;
+    minutes = 0;
+    seconds = 0;
+  }
+
   return { d: days, h: hours, m: minutes };
 }
 
