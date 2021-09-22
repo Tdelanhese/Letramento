@@ -322,7 +322,7 @@ function getDiffDates(dateNow, dateFuture) {
     seconds = 0;
   }
 
-  return { d: days, h: hours, m: minutes };
+  return { d: days, h: hours, m: minutes, s: seconds };
 }
 
 function setDate() {
@@ -342,6 +342,7 @@ function setDate() {
     $(".sec-oferta .dias h3").text(dif.d);
     $(".sec-oferta .hora h3").text(dif.h);
     $(".sec-oferta .min h3").text(dif.m);
+    $(".sec-oferta .sec h3").text(dif.s);
 
     setInterval(function () {
       dif = getDiffDates(dateNow, dateFuture);
@@ -350,6 +351,7 @@ function setDate() {
       $(".sec-oferta .dias h3").text(dif.d);
       $(".sec-oferta .hora h3").text(dif.h);
       $(".sec-oferta .min h3").text(dif.m);
-    }, 60000);
+      $(".sec-oferta .sec h3").text(dif.s);
+    }, 1000);
   });
 }
