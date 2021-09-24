@@ -1487,7 +1487,7 @@ section {
     }
 
     section#aulas .background .sec-oferta .timer {
-        padding: 2rem 5rem;
+        padding: 2rem 3rem;
     }
 
     section#grid-infos .grid .row-one .card-grid:nth-child(3) {
@@ -1509,7 +1509,7 @@ section {
     }
 
     section#aulas .background .sec-oferta .timer .time h3 {
-        font-size: 6.2rem;
+        font-size: 4.7rem;
     }
 }
 
@@ -1527,8 +1527,26 @@ section {
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 350px) {
     html {
         font-size: 37%;
+    }
+}
+
+@media (max-width: 320px) {
+    html {
+        font-size: 35.5%;
+    }
+}
+
+@media (max-width: 280px) {
+    html {
+        font-size: 34.5%;
+    }
+}
+
+@media (max-width: 270px) {
+    html {
+        font-size: 32.5%;
     }
 }
