@@ -1650,6 +1650,9 @@ section#aulas .background .sec-garantia .desc p {
     -ms-grid-column: 1;
     grid-column: 1;
   }
+  section#aulas .background .sec-oferta .timer {
+    padding: 2rem 3rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1690,7 +1693,10 @@ section#aulas .background .sec-garantia .desc p {
     padding: 0 3rem;
   }
   section#aulas .background .sec-oferta .timer {
-    padding: 2rem 3rem;
+    padding: 1.5rem 2rem;
+  }
+  section#aulas .background .sec-oferta .timer .time h3 {
+    font-size: 5.2rem;
   }
   section#grid-infos .grid .row-one .card-grid:nth-child(3) {
     -ms-grid-column: 1;
@@ -1709,7 +1715,7 @@ section#aulas .background .sec-garantia .desc p {
     height: 4rem;
   }
   section#aulas .background .sec-oferta .timer .time h3 {
-    font-size: 4.7rem;
+    font-size: 3.5rem;
   }
 }
 
@@ -1722,6 +1728,9 @@ section#aulas .background .sec-garantia .desc p {
   }
   section#aulas .icons {
     padding: 0 1.5rem;
+  }
+  section#aulas .background .sec-oferta .timer .time h3 {
+    font-size: 3.1rem;
   }
 }
 
