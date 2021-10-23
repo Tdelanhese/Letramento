@@ -119,7 +119,7 @@ section#first-page h4 {
   margin-bottom: 2.5vh;
 }
 
-section#first-page button {
+section#first-page a {
   width: 30vw;
   margin: 5vh;
   padding: 1rem;
@@ -1147,7 +1147,7 @@ section#aulas .background .sec-combo .options-pay .cents p {
   line-height: 1.4rem;
 }
 
-section#aulas .background .sec-combo button {
+section#aulas .background .sec-combo a {
   margin: 7rem 0;
   font-family: "Raleway", sans-serif;
   font-style: normal;
@@ -1168,7 +1168,7 @@ section#aulas .background .sec-combo button {
   outline: none;
 }
 
-section#aulas .background .sec-combo button:hover {
+section#aulas .background .sec-combo a:hover {
   color: #fff;
 }
 
