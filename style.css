@@ -25,6 +25,10 @@ body {
   background-color: #220808;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 section {
   height: 100vh;
   position: relative;
@@ -1147,6 +1151,31 @@ section#aulas .background .sec-combo .options-pay .cents p {
   line-height: 1.4rem;
 }
 
+section#aulas .background .sec-combo .div-prices {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 7rem;
+  margin: 10rem 0;
+}
+
+section#aulas .background .sec-combo .div-prices .div-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 section#aulas .background .sec-combo a {
   margin: 7rem 0;
   font-family: "Raleway", sans-serif;
@@ -1404,6 +1433,9 @@ section#aulas .background .sec-garantia .desc p {
   section#feedbacks h2 {
     padding: 0 15rem;
   }
+  section#aulas .background .sec-combo .div-prices .div-price .price {
+    font-size: 1.7rem;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1558,6 +1590,10 @@ section#aulas .background .sec-garantia .desc p {
   }
   section#aulas .background .sec-combo .title {
     padding: 0 4rem;
+  }
+  section#aulas .background .sec-combo .div-prices {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 

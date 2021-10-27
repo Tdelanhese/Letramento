@@ -22,6 +22,10 @@ body {
     background-color: #220808;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 section {
     height: 100vh;
     // width: 100vw;
@@ -985,6 +989,20 @@ section {
                     }
                 }
 
+                .div-prices {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 7rem;
+                    margin: 10rem 0;
+                    
+                    .div-price {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+
                 a {
                     margin: 7rem 0;
                     font-family: "Raleway", sans-serif;
@@ -1200,6 +1218,10 @@ section {
     section#feedbacks h2 {
         padding: 0 15rem;
     }
+
+    section#aulas .background .sec-combo .div-prices .div-price .price {
+        font-size: 1.7rem;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -1337,6 +1359,10 @@ section {
 
     section#aulas .background .sec-combo .title {
         padding: 0 4rem;
+    }
+
+    section#aulas .background .sec-combo .div-prices {
+        grid-template-columns: 1fr;
     }
 }
 
